@@ -1,0 +1,137 @@
+.admin-page {
+    width: calc(100% - 40px);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin: 20px;
+}
+
+.admin-page h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    height: 30px;
+    margin: 20px 0;
+    padding: 5px 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+}
+
+.add-song {
+    margin-top: 20px;
+}
+
+.add-song input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.add-song button {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    max-width: 800px; /* Tăng chiều rộng tối đa */
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.song-list li {
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    justify-content: space-between; /* Căn giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 15px; /* Khoảng cách bên trong */
+    border-bottom: 1px solid #dddddd; /* Đường phân cách giữa các bài hát */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+    white-space: nowrap; /* Ngăn không cho tên bài hát xuống dòng */
+    overflow: hidden; /* Ẩn phần thừa */
+    text-overflow: ellipsis; /* Thêm dấu ... cho tên bài hát nếu quá dài */
+}
+
+.song-actions {
+    display: flex; /* Sử dụng flexbox cho các hành động */
+    align-items: center; /* Căn giữa các hành động */
+}
+
+.like-button {
+    cursor: pointer;
+    font-size: 18px; /* Kích thước chữ cho nút like */
+    color: #ff4081; /* Màu cho nút like */
+    transition: transform 0.2s; /* Hiệu ứng chuyển động */
+    margin-right: 10px; /* Khoảng cách giữa nút like và audio */
+}
+
+.song-list span {
+    font-size: 16px; /* Kích thước chữ */
+    flex-grow: 1; /* Chiếm không gian còn lại */
+    margin-right: 10px; /* Khoảng cách giữa tên bài hát và hành động */
+}
+.song-name {
+    font-size: 16px; /* Kích thước chữ */
+    color: #000; /* Màu chữ đen */
+    flex-grow: 1; /* Chiếm không gian còn lại */
+    margin-right: 10px; /* Khoảng cách giữa tên bài hát và hành động */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+.song-list li:hover span {
+    color: #ff4081; /* Đổi màu chữ khi hover */
+}
+
+.like-button {
+    cursor: pointer;
+    font-size: 18px; /* Kích thước chữ cho nút like */
+    color: #ff4081; /* Màu cho nút like */
+    transition: transform 0.2s; /* Hiệu ứng chuyển động */
+}
+
+.like-button:hover {
+    transform: scale(1.2); /* Phóng to nút khi hover */
+}
+
+.waiting-page {
+    text-align: center; /* Căn giữa nội dung */
+    font-size: 18px; /* Kích thước chữ */
+    color: #555; /* Màu chữ nhạt */
+    margin: 20px; /* Khoảng cách bên ngoài */
+}
+
+.heart {
+    position: absolute;
+    color: #ff4081; /* Màu trái tim */
+    font-size: 24px; /* Kích thước trái tim */
+    animation: fly 1s forwards; /* Hiệu ứng bay */
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1.5);
+        opacity: 0;
+    }
+}
